@@ -28,3 +28,7 @@ anchor test
 ```
 
 You should see the tests pass once completed.
+
+## youtube notes
+- smart contracts store additional data in PDA, PDA is made from seeds, seeds are whatever you want
+- solana PDAs are a type of key value store, seeds - primary key, PDA - data (value)
