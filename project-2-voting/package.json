@@ -8,8 +8,7 @@
     "anchor-localnet": "nx run anchor:anchor localnet",
     "anchor-test": "nx run anchor:anchor test",
     "feature": "nx generate @solana-developers/preset-react:feature",
-    "prebuild": "cargo install --git https://github.com/coral-xyz/anchor anchor-cli --locked
- && cd anchor && anchor build",
+    "prebuild": "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && source $HOME/.cargo/env && cargo install --git https://github.com/coral-xyz/anchor anchor-cli --locked && cd anchor && anchor build",
     "build": "nx build web",
     "dev": "nx serve web"
   },
