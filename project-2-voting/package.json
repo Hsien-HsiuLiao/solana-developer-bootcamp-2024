@@ -8,7 +8,7 @@
     "anchor-localnet": "nx run anchor:anchor localnet",
     "anchor-test": "nx run anchor:anchor test",
     "feature": "nx generate @solana-developers/preset-react:feature",
-    "prebuild": "curl -sSfL https://release.solana.com/v1.10.32/install | sh -s -- --install-dir $HOME/.local/share/solana && echo 'export PATH=\"$HOME/.local/share/solana/install/active_release/bin:$PATH\"' >> $HOME/.bashrc && source $HOME/.bashrc && curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && source $HOME/.cargo/env && cargo install --git https://github.com/coral-xyz/anchor anchor-cli --locked && cd anchor && anchor build",
+    "prebuild": "sh -c \"$(curl -sSfL https://release.solana.com/v1.10.32/install)\" && export PATH=\"$HOME/.local/share/solana/install/active_release/bin:$PATH\" && curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && source $HOME/.cargo/env && cargo install --git https://github.com/coral-xyz/anchor anchor-cli --locked && cd anchor && anchor build",
     "build": "nx build web",
     "dev": "nx serve web"
   },
