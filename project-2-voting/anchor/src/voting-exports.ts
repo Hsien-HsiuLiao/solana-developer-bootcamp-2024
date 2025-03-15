@@ -8,7 +8,7 @@ import VotingIDL  from '../target/idl/voting.json';
 export { Voting, VotingIDL };
 
 // The programId is imported from the program IDL.
-export const BASIC_PROGRAM_ID = new PublicKey(VotingIDL.address);
+export const programId = new PublicKey(VotingIDL.address);
 
 // This is a helper function to get the Basic Anchor program.
 export function getBasicProgram(provider: AnchorProvider) {
